@@ -90,7 +90,7 @@ public class Taller01 {
             estudiantes[i]=nombreEst();
         }
         cont++;
-        System.out.println("Estudiantes ingresados"+ cont);
+        System.out.println("El numero total de estudiantes es" + cont);
     }
 
     public static String nombreEst(){
