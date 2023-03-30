@@ -1,4 +1,4 @@
-//simular procesoo de aprobacioon de estudiantes por asignatura
+//simular proceso de aprobacion de estudiantes por asignatura
 //Cada estudiante posee 5 notas, 25%,25%,25%,15%,10%
 //Notas aleatorias del 1.0 al 7.0
 
@@ -19,7 +19,7 @@ public class Taller01 {
                 eleccion=leer.nextInt();
                 switch (eleccion){
                     case 1:
-                        agregarEst(crearMatrizEst());
+                        agregarEst(crearMatrizEst()); //Crear Matriz
                         break;
                     case 2:
                         break;
@@ -40,27 +40,27 @@ public class Taller01 {
     }
 
     public static void opciones() {
-        System.out.println("=====MENU=====");
+        System.out.println("Bienvenido al menu, ingrese su opcion");
         System.out.println("[1] Agregar estudiante");
-        System.out.println("[2] Ver estudiantes aprovados");
-        System.out.println("[3] Ver estudiantes Reprovados");
-        System.out.println("[4] Ver estudiantes que van a examen");
-        System.out.println("[5] Mostrar todos los estudiantes");
+        System.out.println("[2] Mostrar cantidad de estudiantes que aprueban la asignatura");
+        System.out.println("[3] Mostrar cantidad de estudiantes que reprueban la asignatura");
+        System.out.println("[4] Mostrar la cantidad de estudiantes que van a examen");
+        System.out.println("[5] Mostrar el estado de todos los estudiantes de la asignatura (notas y promedio)");
         System.out.println("[6] Salir");
     }
 
-    public static String[] crearMatrizEst(){
+    public static String[] crearMatrizEst(){  //Crear Matriz Estudiantes
         String [] Estudiantes = new String[50];
         return Estudiantes;
     }
 
-    public static double[][] crearMatrizNotas(){
+    public static double[][] crearMatrizNotas(){  //Crear matriz notas
         double[][] Notas = new double[50][6];
         return Notas;
     }
 
     public static void mostrarEst(String[] estudiantes){
-        for(int i = 0;i<estudiantes.length;i++){
+        for (int i = 0;i<estudiantes.length;i++){
             System.out.println(estudiantes[i]);
         }
     }
@@ -85,12 +85,12 @@ public class Taller01 {
     }
 
     public static void agregarEst(String[] estudiantes){
-        for(int i=0;i<estudiantes.length;i++){
-            if(estudiantes[i] == null){
-                estudiantes[i]=nombreEst();
-            }
-            break;
+        int cont=0;
+        for(int i=0; i<cont ;i++){
+            estudiantes[i]=nombreEst();
         }
+        cont++;
+        System.out.println("Estudiantes ingresados"+ cont);
     }
 
     public static String nombreEst(){
